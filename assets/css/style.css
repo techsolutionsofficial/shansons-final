@@ -1,0 +1,136 @@
+/*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+
+@import url(https://fonts.googleapis.com/css2?family=Ubuntu:wght@100;200;300;400;500;600;700&display=swap);
+
+body {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.navbar {
+  transition: all 0.6s;
+}
+
+.navbar .nav-link,
+.navbar.active .nav-link {
+  color: #000;
+  margin-left: 10px;
+  font-size: 1.1rem;
+  transition: all 0.6s;
+}
+
+.navbar .nav-item .nav-links::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: #f44336;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.navbar .nav-item .nav-links:hover::after {
+  width: 100%;
+}
+
+h1::after {
+  content: "";
+  width: 50px;
+  height: 4px;
+  background: #f44336;
+  display: block;
+  transition: 0.5s;
+}
+
+.navbar .navbar-brand {
+  width: 40px;
+}
+
+.dropdown-item {
+  transition: all 0.6s;
+}
+
+.dropdown-item:hover {
+  background: transparent;
+  color: #f44336;
+  transition: all 0.6s;
+}
+
+/* Change navbar styling on scroll */
+.navbar.active {
+  background: #fff;
+  padding: 0.5rem 1rem !important;
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.active .nav-link,
+.navbar.active .navbar-brand {
+  color: #555;
+}
+
+/* Change navbar styling on small viewports */
+@media (max-width: 991.98px) {
+  .navbar {
+    background: #fff;
+    transition: all 0.6s;
+  }
+
+  .navbar .navbar-brand,
+  .navbar .nav-link {
+    color: #555;
+  }
+
+  .navbar .nav-item .nav-links:hover::after {
+    width: 0;
+  }
+}
+
+/* ============ only desktop view ============ */
+@media all and (min-width: 992px) {
+  .navbar .nav-item .dropdown-menu {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    margin-top: 0;
+  }
+
+  .navbar .dropdown-menu.fade-down {
+    top: 80%;
+    transform: rotateX(-75deg);
+    transform-origin: 0% 0%;
+  }
+
+  .navbar .dropdown-menu.fade-up {
+    top: 180%;
+  }
+
+  .navbar .nav-item:hover .dropdown-menu {
+    transition: 0.3s;
+    opacity: 1;
+    visibility: visible;
+    top: 100%;
+    transform: rotateX(0deg);
+  }
+}
+
+/* ============ desktop view .end// ============ */
+
+/* .item { */
+/* height: 200px;
+    width: 400px; */
+/* background: #fff;
+    margin: 0 10px 0 10px; */
+/* border: 2px solid black; */
+/* } */
+
+/* .item img {
+    height: 0px;
+    width: 0px;
+    margin: 0 10px;
+} */
