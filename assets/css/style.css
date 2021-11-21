@@ -7,6 +7,13 @@
 */
 
 @import url(https://fonts.googleapis.com/css2?family=Ubuntu:wght@100;200;300;400;500;600;700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap);
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  /* font-family: "Ubuntu", sans-serif; */
+}
 
 :root {
   --primary-color: hsl(238, 52%, 38%);
@@ -71,10 +78,6 @@
   --bs-body-color: #212529;
   --bs-body-bg: #fff;
   /* Bootstrap Colors */
-}
-
-body {
-  font-family: "Ubuntu", sans-serif;
 }
 
 .navbar {
