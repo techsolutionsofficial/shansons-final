@@ -28,5 +28,8 @@ $(function () {
         owl.trigger('stop.owl.autoplay')
     });
     // Owl Carousel
-    
+
 });
+
+// AOS Init
+AOS.init();
