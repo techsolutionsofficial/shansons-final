@@ -98,7 +98,8 @@ body {
   transition: all 0.6s;
 }
 
-.navbar .nav-item .nav-links::after {
+.navbar .nav-item .nav-link::after,
+.navbar .nav-item .nav-link.dropdown-toggle::after {
   content: "";
   width: 0;
   height: 2px;
@@ -109,7 +110,8 @@ body {
   transition: 0.5s;
 }
 
-.navbar .nav-item .nav-links:hover::after {
+.navbar .nav-item .nav-link:hover::after,
+.navbar .nav-item .nav-link.dropdown-toggle:hover::after {
   width: 100%;
 }
 
@@ -139,17 +141,31 @@ h1::after {
   transition: all 0.6s;
 }
 
+.dropdown-toggle .fa-caret-down {
+  transition: all 0.6s;
+}
+
+.dropdown-toggle:hover .fa-caret-down {
+  transform: TranslateX(3px);
+  transition: all 0.6s;
+}
+
 /* Change navbar styling on scroll */
 .navbar.active {
   background: #fff;
   padding: 0.5rem 1rem !important;
-  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 6px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* .navbar.active .nav-link,
-.navbar.active .navbar-brand {
-  color: var(--text-color);
-} */
+.carousel-item {
+  height: 65vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 /* Change navbar styling on small viewports */
 @media (max-width: 991.98px) {
@@ -163,7 +179,8 @@ h1::after {
     color: var(--text-color);
   }
 
-  .navbar .nav-item .nav-links:hover::after {
+  .navbar .nav-item .nav-link:hover::after,
+  .navbar .nav-item .nav-link.dropdown-toggle:hover::after {
     width: 0;
   }
 }
@@ -176,16 +193,19 @@ h1::after {
     visibility: hidden;
     transition: 0.3s;
     margin-top: 0;
+    transition: all 0.6s;
   }
 
   .navbar .dropdown-menu.fade-down {
     top: 80%;
     transform: rotateX(-75deg);
     transform-origin: 0% 0%;
+    transition: all 0.6s;
   }
 
   .navbar .dropdown-menu.fade-up {
     top: 180%;
+    transition: all 0.6s;
   }
 
   .navbar .nav-item:hover .dropdown-menu {
@@ -194,24 +214,12 @@ h1::after {
     visibility: visible;
     top: 100%;
     transform: rotateX(0deg);
+    transition: all 0.6s;
   }
 }
 
 /* ============ desktop view .end// ============ */
 
-/* .item { */
-/* height: 200px;
-    width: 400px; */
-/* background: #fff;
-    margin: 0 10px 0 10px; */
-/* border: 2px solid black; */
-/* } */
-
-/* .item img {
-    height: 0px;
-    width: 0px;
-    margin: 0 10px;
-} */
 
 /* Blue
 Hex
